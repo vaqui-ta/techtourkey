@@ -1,3 +1,4 @@
+@@ -1,54 +0,0 @@
 import pynput
 
 from pynput.keyboard import Key, Listener
@@ -9,7 +10,7 @@ count = 0
 keys = []
 endprog = False
 # This should limit it to a maximum of 50 keyboard entries
-trials = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+trials = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
 
 # The following twoPIP  def functions are used to track keyboard events such as presses.
 
@@ -28,7 +29,7 @@ def onpress(key):
             # print(count)  # troubleshooting count
             # print(count / 10) ^
         # Also checks for Trials modulus, ends program if true.
-        elif count / 10 == 15.0:
+        elif count / 10 == 25.0:
             return False
 
 
@@ -46,7 +47,7 @@ def write_file(keys):
 
 
 def onrelease(key):
-    if key == Key.insert or count / 10 == 10.0:
+    if key == Key.insert or count / 10 == 25.0:
         return False
 
 
